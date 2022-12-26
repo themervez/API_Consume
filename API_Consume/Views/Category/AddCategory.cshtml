@@ -1,0 +1,28 @@
+﻿@model CategoryViewModel
+@{
+    ViewData["Title"] = "AddCategory";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <form method="post">
+        <br />
+        <label>Kategori Adı</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Kategori Açıklaması</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Durumu</label>
+        <select asp-for="Status" class="form-control">
+            <option value="true" selected>Aktif</option>
+            <option value="false">Pasif</option>
+        </select>
+        @*<label>Durumu:</label>
+        <input type="radio" name="Status" value="true" checked />Aktif
+        <input type="radio" name="Status" value="false" />Pasif*@
+        <br />
+        <button class="btn btn-outline-primary">Ekle</button>
+    </form>
+</div>
+
